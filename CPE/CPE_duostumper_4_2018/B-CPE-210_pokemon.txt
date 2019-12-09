@@ -1,0 +1,92 @@
+B2 - Stumpers
+B-CPE-210
+
+Pokemon
+Duo Stumper
+
+2.0
+
+Pokemon
+binary name:
+repository name:
+repository rights:
+language:
+compilation:
+
+pokemon
+CPE_duostumper_$STUMPERNUMBER_$ACADEMICYEAR
+ramassage-tek
+C
+via Makeﬁle, including re, clean and fclean rules
+
+• Your repository must contain the totality of your source files, but no useless files
+(binary, temp files, obj files,...).
+• Error messages have to be written on the error output, and the program should
+then exit with the 84 error code (0 if there is no error).
+
+The $STUMPERNUMBER is always on one digit: 1, 2, . . .
+
+For this project, the only authorized functions are those of the standard libC.
+
+The goal of this exercise is to create a program in C that will allow you to simulate Pokemon fights.
+The Pokemon to be used will be described in the files found in the pokecfg/ folder. The files will be formatted
+in CSV with the following fields:
+∇
+Terminal
+- + x
+∼/B-CPE-210> cat -e pokecfg/pikachu
+#name;attack;defense;speed;health$
+Pikachu;42;42;42;42$
+Raichu;84;20;84;84$
+Your program should then read each file contained in the pokecfg/ folder in order to retrieve the information
+for each Pokemon.
+Lines beginning with "#" are comments and should be ignored. Also, each file can contain several Pokemon.
+After having retrieved the information from the configuration files, your program should display the retrieved Pokemon and their stats in the following way:
+Pokemon NAME has ATTACK attack, DEFENSE defense, SPEED speed and HEALTH health.
+
+The displayed pokemon must be sorted by their names (case insensitive)
+If a line is invalid, you must skip it and continue the parsing.
+
+1
+
+Next, you must pick the two Pokemon specified as parameter and simulate a fight between them.
+Combat rules are as follow:
+• The Pokemon take turns attacking
+• The Pokemon that has the highest speed value starts
+• A Pokemon attacks its opponent and tries to give an amount of damage between 0 and its attack
+value
+• The opposing Pokemon decreases the damage incurred by its defense value
+• The health value of the Pokemon opponent is decreased from the remaining damages
+• When a Pokemon’s health value is reduced to 0, he is KO and the fight is over
+∇
+Terminal
+∼/B-CPE-210> cat pokecfg/pikachu pokecfg/pidgeotto
+#name;attack;defense;speed;health
+Pikachu;42;10;42;42
+Raichu;84;20;84;84
+#name;attack;defense;speed;health
+Pidgeotto;23;25;50;13
+∼/B-CPE-210> ./pokemon Pikachu Raichu
+Pokemon Pidgeotto has 23 attack, 25 defense, 50 speed and 13 health
+Pokemon Pikachu has 42 attack, 10 defense, 42 speed and 42 health
+Pokemon Raichu has 84 attack, 20 defense, 84 speed and 84 health
+Raichu attacks for 23 damage
+Pikachu blocks 10 damage
+Pikachu loses 13 health (29 left)
+Pikachu attacks for 41 damage
+Raichu blocks 20 damage
+Raichu loses 21 health (63 left)
+Raichu attacks for 80 damage
+Pikachu blocks 10 damage
+Pikachu loses 70 health (0 left)
+Pikachu is KO
+Raichu wins the fight!
+∼/B-CPE-210>
+
+Your error messages must be clear and displayed on the error output.
+
+2
+
+- + x
+
+

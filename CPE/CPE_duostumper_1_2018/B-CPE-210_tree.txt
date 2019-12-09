@@ -1,0 +1,48 @@
+B2 - Stumpers
+B-CPE-210
+
+Tree
+Duo Stumper
+
+1.01
+
+Tree
+binary name:
+repository name:
+repository rights:
+language:
+compilation:
+
+tree
+CPE_duostumper_$STUMPERNUMBER_$ACADEMICYEAR
+ramassage-tek
+C
+via Makeﬁle, including re, clean and fclean rules
+
+• Your repository must contain the totality of your source files, but no useless files
+(binary, temp files, obj files,...).
+
+The $STUMPERNUMBER is always on one digit: 1, 2, . . .
+
+For this project, the only authorized functions are write, malloc, free, opendir,
+closedir, readdir and stat.
+
+The goal of this exercise is to code a program in C that will reproduce the behavior of the tree shell command
+when it’s used with the option --charset=ASCII.
+You must implement the following options:
+•
+•
+•
+•
+
+-a
+-d
+-L
+-f
+
+All of these options must be able to be combined and have a behavior that is identical to the original command.
+Your error messages and exit codes must be identical to the real tree binary.
+
+1
+
+
