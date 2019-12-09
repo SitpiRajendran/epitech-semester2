@@ -1,0 +1,158 @@
+B2 - Stumpers
+B-CPE-210
+
+Tic Tac Toe
+Duo Stumper
+
+1.0
+
+Tic Tac Toe
+binary name:
+repository name:
+repository rights:
+language:
+compilation:
+
+tictactoe
+CPE_duostumper_$STUMPERNUMBER_$ACADEMICYEAR
+ramassage-tek
+C
+via Makeﬁle, including re, clean and fclean rules
+
+• Your repository must contain the totality of your source files, but no useless files
+(binary, temp files, obj files,...).
+• Error messages have to be written on the error output, and the program should
+then exit with the 84 error code (0 if there is no error).
+
+The $STUMPERNUMBER is always on one digit: 1, 2, . . .
+
+For this project, the only authorized functions are those of the standard libC.
+
+You must write a program that simulate a game of Tic-Tac-Toe. Tic-Tac-Toe is played on a square grid (3x3
+by default).
+Two players face off and when it’s their turn, they must each fill in a square with an assigned symbol.
+Whomever manages to line-up n identical symbols (horizontally, vertically, diagonally) is the winner (n being the size of the grid).
+Usage: ./tictactoe [-p1 CHAR1] [-p2 CHAR2] [-s GRID_SIZE]
+-p1 CHAR1: defines the character used by the first player (default: X)
+-p2 CHAR2: defines the character used by the second player (default: O, the letter)
+-s GRID_SIZE: defines the size of the grid (default: 3).
+The human player will place their symbol (in the form of a pair x,y) in a square. You will read the square’s
+coordinates on the standard input. If the user’s input is not in a valid format, your program should ask for it
+again. The two players cannot use the same symbol.
+The upper lefthand square will have 0,0 for coordinates.
+Italic yellow text represents user input.
+
+1
+
+∇
+∼/B-CPE-210> ./tictactoe
+
+Terminal
+
++---+
+|   |
+|   |
+|   |
++---+
+
+Player 1> 1,1
++ - - -+
+|   |
+| X |
+|   |
++ - - -+
+
+Player 2> 0,0
++ - - -+
+|O  |
+| X |
+|   |
++ - - -+
+
+Player 1> 1,0
++ - - -+
+|OX |
+| X |
+|   |
++ - - -+
+
+Player 2> 1,2
++ - - -+
+|OX |
+| X |
+| O |
++ - - -+
+
+Player 1> 2,0
++ - - -+
+|OXX|
+| X |
+| O |
++ - - -+
+
+Player 2> 2,2
++ - - -+
+|OXX|
+| X |
+| OO|
++ - - -+
+
+Player 1> 0,2
++ - - -+
+|OXX|
+| X |
+|XOO|
++ - - -+
+
+Player 1 won!
+
+2
+
+- + x
+
+∇
+Terminal
+∼/B-CPE-210> cat inputs
+1,1
+0,0
+1,0
+1,2
+2,0
+2,2
+0,2
+∼/B-CPE-210> cat inputs | ./tictactoe | cat -e
++ - - -+ $
+|
+|$
+|
+|$
+|
+|$
++ - - -+ $
+Player 1 > + - - -+ $
+|
+|$
+| X |$
+|
+|$
++ - - -+ $
+Player 2 > + - - -+ $
+|O |$
+| X |$
+|
+|$
++ - - -+ $
+
+... (and so on...)
+Player 1 > + - - -+ $
+| OXX | $
+| X |$
+| XOO | $
++ - - -+ $
+Player 1 won ! $
+
+3
+
+- + x
+
+
