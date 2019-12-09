@@ -1,0 +1,184 @@
+[11]
+NAME="Nothing"
+SETUP="export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo ''
+[11-END]
+
+[12]
+NAME="Simple Exec"
+SETUP="export TERM=xterm ; PATH='./:/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo './42sh'
+  echo 'exit'
+[12-END]
+
+[13]
+NAME="Run Simple Commands"
+SETUP="export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo 'cat /etc/resolv.conf'
+  echo 'ls -l /etc'
+  echo 'pwd'
+[13-END]
+
+[14]
+NAME="Wrong Command"
+SETUP="export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo 'fakecommand'
+  echo 'exit'
+[14-END]
+
+[23]
+NAME="Path Handling 3"
+SETUP="export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo '/usr/bin'
+  echo 'exit'
+[23-END]
+
+[31]
+NAME="setenv and unsetenv"
+SETUP="export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo 'setenv TOTO zero'
+  echo 'unsetenv PATH'
+[31-END]
+
+[32]
+NAME="setenv and unsetenv with alphanumeric"
+SETUP="export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo 'setenv t0t0 zero'
+[32-END]
+
+[41]
+NAME="cd"
+SETUP="export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo 'cd'
+[41-END]
+
+[42]
+NAME="cd error"
+SETUP="export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo 'cd coucou'
+  echo 'exit 0'
+[42-END]
+
+[43]
+NAME="cd -"
+SETUP="export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo 'cd -'
+  echo 'exit 0'
+[43-END]
+
+[44]
+NAME="cd .."
+SETUP="export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo 'cd ..'
+[44-END]
+
+[51]
+NAME="space 1"
+SETUP="export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo 'ls   -l'
+[51-END]
+
+[52]
+NAME="space 2"
+SETUP="export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo '    ls   -l'
+[52-END]
+
+[53]
+NAME="many tab and space"
+SETUP="export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo -e "\t\t    ls\t     \t-l    \t\t  \t -a /usr   \t\t"
+[53-END]
+
+[61]
+NAME="Launch program with bad format"
+SETUP="ulimit -c 0 ; export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo "./tests/bad_exec"
+  echo 'exit'
+[61-END]
+
+[65]
+NAME="exec a directory"
+SETUP="ulimit -c 0 ; export TERM=xterm ; PATH='./:/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo "ls"
+  echo "./tests"
+  echo 'exit'
+[65-END]
+
+[71]
+NAME="two separators"
+SETUP="ulimit -c 0 ; export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo "ls src ; ls"
+[71-END]
+
+[72]
+NAME="three separators"
+SETUP="ulimit -c 0 ; export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo "ls src ; ls ; ls src/Errors"
+  echo 'exit'
+[72-END]
+
+[81]
+NAME="A pipe with a builtin simple ?"
+SETUP="export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo 'setenv | /bin/grep VAR1'
+  echo 'exit'
+[81-END]
+
+[82]
+NAME="Testing simple pipe"
+SETUP="export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo "ls -l /bin | grep sh"
+  echo 'exit'
+[82-END]
+
+[83]
+NAME="A pipe with a builtin hard ?"
+SETUP="export TERM=xterm ; PATH='/bin:/usr/bin'"
+CLEAN=""
+TESTS=
+  echo 'setenv | /bin/grep VAR1'
+  echo '/bin/ls | cd /usr'
+  echo 'ls -l'
+  echo 'exit 45 | cat /etc/resolv.conf'
+[83-END]
