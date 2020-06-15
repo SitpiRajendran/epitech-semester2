@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,700,800');
+
+body {
+    background: url(background.jpg);
+    background-size: cover;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* /////////////////////////////  NAVBAR  ///////////////////////////////// */
+
+.navbar {
+    width: 101vw;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    height: 6vw;
+    margin: -9px;
+    background-color:#1d774c;
+}
+
+.title {
+    text-decoration: none;
+    float: left;
+    padding: 1vw 2.3vw;
+    font-size: 2.9vw;
+    display: block;
+    outline: 0;
+    color: aliceblue;
+    white-space: normal;
+    font-weight: bold;
+}
+
+.button {
+    float: right;
+    padding: 2.2vw 3vw;
+    font-size: 1.2vw;
+    display: block;
+    margin-left: 0vw;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.button:hover {
+    background: #2b9260;
+}
+
+/* /////////////////////////////  FLEXBOX  ///////////////////////////////// */
+
+h1 {
+    font-size: 10vw;
+    text-align: center;
+    margin-top: 8vw;
+    margin-bottom: 0vw;
+    color: #333635;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin: 0vw 20vw;
+    background: #2b9260;
+}
+
+h3 {
+    font-size: 3vw;
+    text-align: center;
+    margin: 0.2vw 13vw;
+    font-weight: normal;
+    color: #ffffff;
+}
