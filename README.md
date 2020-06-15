@@ -1,6 +1,6 @@
-# {EPITECH.} - C Pool & Semester 1
+# {EPITECH.} - Semester 2
 
-All {EPITECH.} projects that i have done during the first six months.
+All {EPITECH.} projects that i have done during the second part of the Tek1 (first year in epitech).
 
 ## Usage
 
@@ -29,20 +29,17 @@ The graphical programming consists in creating images/animations and scenes mana
 
 -----
 ### [NOOB -  Security - Binary](https://github.com/SitpiRajendran/epitech-semester2/tree/master/NOOB)
-A study of the vulnerabilities associated with application development. A non-exhaustive list of areas covered:
+A study of the vulnerabilities associated with application development.
 
 -----
-### [PSU - ÉCRITS PROFESSIONNELS](https://github.com/SitpiRajendran/epitech-semester2/tree/master/B2)
-Le module B2 est consacré aux bases de l'écrit professionnel.
+### [PSU - UNIX SYSTEM AND SHELL PROGRAMMING](https://github.com/SitpiRajendran/epitech-semester2/tree/master/PSU)
+Let's continue with the fundamentals of UNIX programming. Let's continue with the fundamentals of UNIX programming.
 
 -----
-### [WEB - ÉCRITS PROFESSIONNELS](https://github.com/SitpiRajendran/epitech-semester2/tree/master/B2)
-Le module B2 est consacré aux bases de l'écrit professionnel.
+### [WEB - INTRODUCTION TO WEB DEVELOPMENT](https://github.com/SitpiRajendran/epitech-semester2/tree/master/WEB)
+EPyTodo is a project which you could rely on in the future. You have to recreate a Trello like website.
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+-----
+## Who am I ?
 
-Please make sure to update tests as appropriate.
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+I am Sitpi RAJENDRAN, a {EPITECH.} student from the 2023 Prom's in the Paris Campus.
